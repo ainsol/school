@@ -1,0 +1,49 @@
+Proposed System:
+The system proposed is the Server based android app of school management system. It is based on the automation of processes. Making parents aware of the condition of their child in school. The proposed system is assumed to automate the attendance of the teachers , students and the management of monthly test result and term wise result management. And the parents accessing the results as soon as they are updated.
+The time table of the school is also updated on the app.
+Detailed Description:
+First of all we need to identify our Stake holders 
+1.	Principal
+2.	Data entry person
+3.	Teachers
+4.	Parents
+5.	Students
+Every stake holder has his own role. The access to every stake holder is controlled and managed.
+Lets discuss the rough idea of access and nature of the use for the Different stake holders
+1.	Principal
+He is the super user having all the access on the system. He gets the reports of the monthly attendance and the result report and he is the main stake holder.
+2.	Data entry person
+He is just responsible for adding data of classes , sections and students and their marks and results and responsible for assuring that record entered is clear and not dirty.
+3.	Teachers
+Responsible of marking his and class attendance and assuring that test and exam result goes well.
+4.	Parents
+Just they view their son’s progress and the overall analysis.
+5.	Students
+Just verify their marks 
+
+
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Requirements
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+1-	Student Attendance, using biometric. Parents will directly observe their children arrival and when he left from school.  
+2-	Student real time detailed mark sheets. 
+4-	Teachers time table management.
+<<<<<<< HEAD
+6- 	Class Start and end time should be noted. means when teacher enters he checks in to the class and then when he finishes he should check out
+7.      Parents teacher meeting schedule should be updated on it
+8.      parents can chat with teacher and principal
+=======
+6-	Holiday calender management
+7-	Teachers performance calculated from students performance. 
+
+5-	Automating the process of Bell ringing through software. 
+
+3-	Student comparison all over the school. 
+4-	Student relative performance calculation. 
+>>>>>>> d27970f5e6ce22970846beb40fef8442689fe190
+
+
+
+

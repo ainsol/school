@@ -1,0 +1,21 @@
+git init // to initialize the new directory (not applicable for you right noe)
+
+just do 
+
+1- git clone https://github.com/shahidmuneer/school-attendance-ms
+
+2- git add orign https://github.com/shahidmuneer/school-attendance-ms master
+// this will assign orign variable a url above 
+
+3- git commit -m "i have changed this" master 
+
+//you wil need to do this everytime you made change to any file after haf hour one hour it is to saving changes in tree
+
+4- git pull orign master 
+
+//this will merge changes of mine to you you will need to run this command after git commit
+ 
+
+4- git push orign master 
+
+//this will allow you to push changes to remote directory

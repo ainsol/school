@@ -1,0 +1,7 @@
+Android/.gradle/*
+Android/gradle/*
+Android/.gradle/*
+Android/build/*
+
+Web/vendor/*
+Web/Storage/*
