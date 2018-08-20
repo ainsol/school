@@ -44,6 +44,16 @@ Requirements
 4-	Student relative performance calculation. 
 >>>>>>> d27970f5e6ce22970846beb40fef8442689fe190
 
+//api keys 
+Encryption keys generated successfully.
+Personal access client created successfully.
+Client ID: 1
+Client Secret: AwcD52DgpuIbLxK934xohgtwZoINCajPbuNVDy7J
+Password grant client created successfully.
+Client ID: 2
+Client Secret: ZIyhVSoa57ezHfnUkxlybLf6zJYjvBazy0vTnDJB
+
+
 
 
 
