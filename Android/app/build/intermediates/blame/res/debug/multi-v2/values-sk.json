@@ -4,55 +4,7 @@
             "outputFile": "E:\\School ms\\Ainsol\\school\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sk\\values-sk.xml",
             "map": [
                 {
-<<<<<<< HEAD
                     "source": "C:\\Users\\FA15BSSE026.vcomsats\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.1.aar\\6154157daacb2fe83bf999d42557a792\\res\\values-sk\\values-sk.xml",
-=======
-                    "source": "C:\\Users\\Umer\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.1.aar\\14f94f55a730565119f199e6eb8f20ef\\res\\values-sk\\values-sk.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "291,398,498,609,695,803,921,1026,1135,1234,1340,1451,1560",
-                        "endColumns": "106,99,110,85,107,117,104,108,98,105,110,108,123",
-                        "endOffsets": "393,493,604,690,798,916,1021,1130,1229,1335,1446,1555,1679"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,162,262,373,459,567,685,790,899,998,1104,1215,1324",
-                        "endColumns": "106,99,110,85,107,117,104,108,98,105,110,108,123",
-                        "endOffsets": "157,257,368,454,562,680,785,894,993,1099,1210,1319,1443"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "E:\\Ainsol\\school\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sk\\values-sk.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Umer\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.1.aar\\14f94f55a730565119f199e6eb8f20ef\\res\\values-sk\\values-sk.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "291,398,498,609,695,803,921,1026,1135,1234,1340,1451,1560",
-                        "endColumns": "106,99,110,85,107,117,104,108,98,105,110,108,123",
-                        "endOffsets": "393,493,604,690,798,916,1021,1130,1229,1335,1446,1555,1679"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,162,262,373,459,567,685,790,899,998,1104,1215,1324",
-                        "endColumns": "106,99,110,85,107,117,104,108,98,105,110,108,123",
-                        "endOffsets": "157,257,368,454,562,680,785,894,993,1099,1210,1319,1443"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\Users\\Umer\\Downloads\\Compressed\\Login_SignUp_ScreenDesgin_Demo\\Login_SignUp_ScreenDesgin_Demo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sk\\values-sk.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Umer\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.1.aar\\14f94f55a730565119f199e6eb8f20ef\\res\\values-sk\\values-sk.xml",
->>>>>>> ea8aefa9a4bd1c921bfa364e0183124e93e39f10
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",

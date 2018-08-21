@@ -1,6 +1,7 @@
 package com.login_signup_screendesign_demo;
 
-import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -8,18 +9,22 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.login_signup_screendesign_demo.R;
+import com.login_signup_screendesign_demo.Models.Settings;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.content.res.XmlResourceParser;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.text.InputType;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -35,6 +40,11 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 public class Login_Fragment extends Fragment implements OnClickListener {
 	private static View view;
 
@@ -46,7 +56,7 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 	private static Animation shakeAnimation;
 	private static FragmentManager fragmentManager;
 
-	public static final String url="http://localhost:8000/api";
+
 
 	public Login_Fragment() {
 
@@ -137,23 +147,48 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 		case R.id.loginBtn:
 			checkValidation();
 
-			// Instantiate the RequestQueue.
-			RequestQueue queue = Volley.newRequestQueue(Login_Fragment);
+			JSONObject obj = new JSONObject();
 
-// Request a string response from the provided URL.
-			StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
-					new Response.Listener<String>() {
+			try {
+				obj.put("email", "admin@admin.com");
+				obj.put("password", "password");
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+
+		Uri.Builder urlBuild = Uri.parse(Settings.url)
+					.buildUpon()
+					.appendPath("login");
+
+			String url = urlBuild.build().toString();
+			JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
+					(Request.Method.POST,url ,obj,new Response.Listener<JSONObject>() {
 						@Override
-						public void onResponse(String response) {
-							// Display the first 500 characters of the response string.
-							//mTextView.setText("Response is: "+ response.substring(0,500));
+						public void onResponse(JSONObject response) {
+
+//							try {
+
+								Log.i("Shahid",response.toString());
+
+//								String token=response.getJSONObject("token").toString();
+//								Intent intent = new Intent(view.getContext(), MainActivity.class);
+//								String message = token;
+//								intent.putExtra(EXTRA_MESSAGE, message);
+//								startActivity(intent);
+
+//							} catch (JSONException e) {
+//								e.printStackTrace();
+//							}
 						}
-					}, new Response.ErrorListener() {
-				@Override
-				public void onErrorResponse(VolleyError error) {
-					//mTextView.setText("That didn't work!");
-				}
-			});
+					},
+							new Response.ErrorListener() {
+								@Override
+								public void onErrorResponse(VolleyError error) {
+                                    Log.i("Shahid",error.toString());
+								}
+							}
+					);
+			Volley.newRequestQueue(view.getContext()).add(jsonObjectRequest);
 
 
 			break;
