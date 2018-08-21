@@ -1,6 +1,8 @@
 package com.login_signup_screendesign_demo;
 
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -8,6 +10,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.login_signup_screendesign_demo.R;
@@ -35,6 +38,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.json.JSONObject;
+
 public class Login_Fragment extends Fragment implements OnClickListener {
 	private static View view;
 
@@ -46,7 +51,7 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 	private static Animation shakeAnimation;
 	private static FragmentManager fragmentManager;
 
-	public static final String url="http://localhost:8000/api";
+	public static final String url="http://localhost:8000/api/login";
 
 	public Login_Fragment() {
 
@@ -138,22 +143,34 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 			checkValidation();
 
 			// Instantiate the RequestQueue.
-			RequestQueue queue = Volley.newRequestQueue(Login_Fragment);
+			RequestQueue queue = Volley.newRequestQueue(view.getContext());
 
-// Request a string response from the provided URL.
-			StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
-					new Response.Listener<String>() {
+
+// POST parameters
+			Map<String, String> params = new HashMap<String, String>();
+			params.put("tag", "test");
+
+			JSONObject jsonObj = new JSONObject(params);
+
+// Request a json response from the provided URL
+			JsonObjectRequest jsonObjRequest = new JsonObjectRequest
+					(Request.Method.POST, url, jsonObj, new Response.Listener<JSONObject>()
+					{
 						@Override
-						public void onResponse(String response) {
-							// Display the first 500 characters of the response string.
-							//mTextView.setText("Response is: "+ response.substring(0,500));
+						public void onResponse(JSONObject response)
+						{
+							Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_SHORT).show();
 						}
-					}, new Response.ErrorListener() {
-				@Override
-				public void onErrorResponse(VolleyError error) {
-					//mTextView.setText("That didn't work!");
-				}
-			});
+					},
+							new Response.ErrorListener()
+							{
+								@Override
+								public void onErrorResponse(VolleyError error)
+								{
+									Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+								}
+							});
+
 
 
 			break;
