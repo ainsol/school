@@ -4,7 +4,55 @@
             "outputFile": "E:\\School ms\\Ainsol\\school\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-land-v4\\values-xlarge-land-v4.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\FA15BSSE026.vcomsats\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.1.aar\\6154157daacb2fe83bf999d42557a792\\res\\values-xlarge-land\\values-xlarge-land.xml",
+=======
+                    "source": "C:\\Users\\Umer\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.1.aar\\14f94f55a730565119f199e6eb8f20ef\\res\\values-xlarge-land\\values-xlarge-land.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "299",
+                        "endColumns": "63",
+                        "endOffsets": "358"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "63",
+                        "endOffsets": "114"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\Ainsol\\school\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-land-v4\\values-xlarge-land-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Umer\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.1.aar\\14f94f55a730565119f199e6eb8f20ef\\res\\values-xlarge-land\\values-xlarge-land.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "299",
+                        "endColumns": "63",
+                        "endOffsets": "358"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "63",
+                        "endOffsets": "114"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "C:\\Users\\Umer\\Downloads\\Compressed\\Login_SignUp_ScreenDesgin_Demo\\Login_SignUp_ScreenDesgin_Demo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-land-v4\\values-xlarge-land-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Umer\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-22.2.1.aar\\14f94f55a730565119f199e6eb8f20ef\\res\\values-xlarge-land\\values-xlarge-land.xml",
+>>>>>>> ea8aefa9a4bd1c921bfa364e0183124e93e39f10
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",

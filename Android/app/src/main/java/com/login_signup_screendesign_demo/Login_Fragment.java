@@ -1,8 +1,15 @@
 package com.login_signup_screendesign_demo;
 
+import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.login_signup_screendesign_demo.R;
 
 import android.content.res.ColorStateList;
@@ -38,6 +45,8 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 	private static LinearLayout loginLayout;
 	private static Animation shakeAnimation;
 	private static FragmentManager fragmentManager;
+
+	public static final String url="http://localhost:8000/api";
 
 	public Login_Fragment() {
 
@@ -86,7 +95,6 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 	private void setListeners() {
 		loginButton.setOnClickListener(this);
 		forgotPassword.setOnClickListener(this);
-		signUp.setOnClickListener(this);
 
 		// Set check listener over checkbox for showing and hiding password
 		show_hide_password
@@ -128,6 +136,26 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 		switch (v.getId()) {
 		case R.id.loginBtn:
 			checkValidation();
+
+			// Instantiate the RequestQueue.
+			RequestQueue queue = Volley.newRequestQueue(Login_Fragment);
+
+// Request a string response from the provided URL.
+			StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+					new Response.Listener<String>() {
+						@Override
+						public void onResponse(String response) {
+							// Display the first 500 characters of the response string.
+							//mTextView.setText("Response is: "+ response.substring(0,500));
+						}
+					}, new Response.ErrorListener() {
+				@Override
+				public void onErrorResponse(VolleyError error) {
+					//mTextView.setText("That didn't work!");
+				}
+			});
+
+
 			break;
 
 		case R.id.forgot_password:
