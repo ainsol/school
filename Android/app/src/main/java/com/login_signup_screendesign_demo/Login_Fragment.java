@@ -1,11 +1,6 @@
 package com.login_signup_screendesign_demo;
 
-<<<<<<< HEAD
-import java.net.URL;
-=======
->>>>>>> e43f4a7dbca40972808132e3a122a3c809daf876
-import java.util.HashMap;
-import java.util.Map;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,10 +9,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-<<<<<<< HEAD
-import com.android.volley.toolbox.StringRequest;
-=======
->>>>>>> e43f4a7dbca40972808132e3a122a3c809daf876
+
 import com.android.volley.toolbox.Volley;
 import com.login_signup_screendesign_demo.Models.Settings;
 
@@ -48,16 +40,11 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-<<<<<<< HEAD
 import org.json.JSONObject;
 
-=======
 import org.json.JSONException;
-import org.json.JSONObject;
-
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
->>>>>>> e43f4a7dbca40972808132e3a122a3c809daf876
 public class Login_Fragment extends Fragment implements OnClickListener {
 	private static View view;
 
@@ -69,11 +56,6 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 	private static Animation shakeAnimation;
 	private static FragmentManager fragmentManager;
 
-<<<<<<< HEAD
-	public static final String url="http://localhost:8000/api/login";
-=======
-
->>>>>>> e43f4a7dbca40972808132e3a122a3c809daf876
 
 	public Login_Fragment() {
 
@@ -164,37 +146,7 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 		case R.id.loginBtn:
 			checkValidation();
 
-<<<<<<< HEAD
-			// Instantiate the RequestQueue.
-			RequestQueue queue = Volley.newRequestQueue(view.getContext());
 
-
-// POST parameters
-			Map<String, String> params = new HashMap<String, String>();
-			params.put("tag", "test");
-
-			JSONObject jsonObj = new JSONObject(params);
-
-// Request a json response from the provided URL
-			JsonObjectRequest jsonObjRequest = new JsonObjectRequest
-					(Request.Method.POST, url, jsonObj, new Response.Listener<JSONObject>()
-					{
-						@Override
-						public void onResponse(JSONObject response)
-						{
-							Toast.makeText(view.getContext(), response.toString(), Toast.LENGTH_SHORT).show();
-						}
-					},
-							new Response.ErrorListener()
-							{
-								@Override
-								public void onErrorResponse(VolleyError error)
-								{
-									Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
-								}
-							});
-
-=======
 			JSONObject obj = new JSONObject();
 
 			try {
@@ -237,7 +189,6 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 							}
 					);
 			Volley.newRequestQueue(view.getContext()).add(jsonObjectRequest);
->>>>>>> e43f4a7dbca40972808132e3a122a3c809daf876
 
 
 			break;
